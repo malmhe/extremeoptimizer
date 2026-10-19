@@ -20,9 +20,9 @@ jobs:
           java-version: 21
 
       - name: Установить Gradle 8.10
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.10
+          gradle-version: 8.10.2
 
       - name: Собрать мод
         run: gradle build --no-daemon
