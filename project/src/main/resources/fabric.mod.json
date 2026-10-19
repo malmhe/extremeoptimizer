@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "extremeoptimizer",
+  "version": "${version}",
+  "name": "Extreme Optimizer",
+  "description": "Жесткая оптимизация FPS: авто-настройка под железо, встроенный entity culling, вкладка в Sodium.",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/extremeoptimizer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.extremeoptimizer.client.ExtremeOptimizerClient"
+    ],
+    "sodium": [
+      "com.extremeoptimizer.integration.SodiumIntegration"
+    ]
+  },
+  "mixins": [
+    "extremeoptimizer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*",
+    "sodium": "*"
+  },
+  "custom": {
+    "sodium:options": {
+      "enabled": true
+    }
+  }
+}
